@@ -1,0 +1,108 @@
+:root {
+  --yellow: #fbffa7;
+  --orange: #ff764d;
+  --lavender: #b1c5ff;
+  --purple: #d5b3ff;
+  --mint: #b6ffc0;
+  --blue: #0000ff;
+  --gray: #f3f3f3;
+  --black: #111;
+  --white: #fff;
+
+  --background-color: var(--gray);
+  --text-dark: (var(--black));
+  --text-light: var(--white);
+  --text-link: var(--blue);
+  --text-link-inverted: var(--text-light);
+}
+
+body {
+  font-family: "Futura";
+  font-size: 1rem;
+  color: var(--text-dark);
+  background-color: var(--background-color);
+  margin: 0;
+  width: 100vw;
+  position: relative;
+}
+
+.main {
+  background: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+}
+
+header nav a {
+  color: var(--text-link-inverted);
+  margin-bottom: 1rem;
+}
+
+section.hero {
+  padding: 2.5rem;
+  background-color: yellow;
+}
+
+section.hero .hero-image {
+  position: relative;
+}
+
+@media (min-width: 760px) {
+  .main {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    position: relative;
+    border-bottom: 1px solid lightgray;
+  }
+
+  header nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  header nav a {
+    margin-right: 2rem;
+    margin-bottom: 0;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+  }
+
+  header nav .link--accent {
+    color: var(--text-link);
+  }
+
+  header nav a.logo {
+    font-size: 1.8rem;
+    margin-right: 2rem;
+  }
+
+  .nav--secondary {
+    padding: 1rem;
+  }
+
+  .nav--secondary a {
+    margin-right: 2rem;
+  }
+}
